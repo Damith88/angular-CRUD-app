@@ -1,0 +1,40 @@
+components:
+  schemas:
+    Address:
+      type: object
+      properties:
+        street:
+          type: string
+          description: street of the school address
+        suburb:
+          type: string
+          description: suburb of the school address
+        state:
+          type: string
+          description: state of the school address
+        postcode:
+          type: string
+          description: postcode of the school address
+
+    NewSchool:
+      type: object
+      required:
+        - name
+      properties:
+        name:
+          type: string
+          description: Name of the school 
+        studentCount:
+          type: integer
+          description: Number of students in the school
+        address:
+          $ref: "#/components/schemas/Address"
+    School:
+      allOf:
+        - type: object
+          required:
+            - _id
+          properties:
+            _id:
+              type: string
+        - $ref: "#/components/schemas/NewSchool"

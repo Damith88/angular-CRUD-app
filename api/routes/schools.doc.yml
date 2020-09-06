@@ -1,0 +1,111 @@
+/api/schools:
+  get:
+    summary: Returns list of schools
+    produces:
+      - application/json
+    parameters:
+      - name: name
+        description: filter criteria name
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: address
+        description: filter criteria address
+        style: deepObject
+        in: query
+        required: false
+        schema:
+          $ref: "#/components/schemas/Address"
+      - name: sort
+        description: sort field
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: sortOrder
+        description: sort order
+        in: query
+        default: asc
+        schema:
+          type: string
+          enum:
+            - asc
+            - desc
+      - name: page
+        description: page number
+        in: query
+        required: false
+        schema:
+          type: integer
+      - name: limit
+        description: number of items per page
+        in: query
+        required: false
+        schema:
+          type: integer
+
+    responses:
+      200:
+        description: success response
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                payload:
+                  type: array
+                  description: schools list
+                  items:
+                    $ref: "#/components/schemas/School"
+                meta:
+                  type: object
+                  description: response meta data
+                  properties:
+                    total:
+                      type: integer
+                      description: total number of records matching filter criteria
+            example:
+              payload:
+                - _id: 5f489cfb8f801d31ac76b0eb
+                  name: ATTADALE PRIMARY SCHOOL
+                  studentCount: 390
+                  address:
+                    street: WICHMANN ROAD
+                    suburb: ATTADALE
+                    state: WA
+                    postcode: 6156
+              meta:
+                total: 120
+
+  post:
+    summary: Create a new school
+    requestBody:
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/NewSchool"
+          example:
+            name: ATTADALE PRIMARY SCHOOL
+            studentCount: 390
+            address:
+              street: WICHMANN ROAD
+              suburb: ATTADALE
+              state: WA
+              postcode: 6156
+    responses:
+      "201":
+        description: Created
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/School"
+            example:
+              _id: 5f489cfb8f801d31ac76b0eb
+              name: ATTADALE PRIMARY SCHOOL
+              studentCount: 390
+              address:
+                street: WICHMANN ROAD
+                suburb: ATTADALE
+                state: WA
+                postcode: 6156

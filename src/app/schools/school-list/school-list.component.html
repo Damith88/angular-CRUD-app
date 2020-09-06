@@ -1,0 +1,97 @@
+<div class="container mt-3">
+  <h1>School List</h1>
+  <mat-card>
+    <mat-card-content>
+      <form [formGroup]="searchForm" (ngSubmit)="search()">
+
+        <div class="row">
+          <mat-form-field appearance="standard" class="col-md-6">
+            <mat-label>Name:</mat-label>
+            <input matInput formControlName="name">
+          </mat-form-field>
+        </div>
+
+        <div formGroupName="address" class="row">
+
+          <mat-form-field appearance="standard" class="col-md-3 col-sm-6">
+            <mat-label>Street:</mat-label>
+            <input matInput formControlName="street">
+          </mat-form-field>
+
+          <mat-form-field appearance="standard" class="col-md-3 col-sm-6">
+            <mat-label>Suburb:</mat-label>
+            <input matInput formControlName="suburb">
+          </mat-form-field>
+
+          <mat-form-field appearance="standard" class="col-md-3 col-sm-6">
+            <mat-label>State:</mat-label>
+            <input matInput formControlName="state">
+          </mat-form-field>
+
+          <mat-form-field appearance="standard" class="col-md-3 col-sm-6">
+            <mat-label>Post Code:</mat-label>
+            <input matInput formControlName="postcode">
+          </mat-form-field>
+        </div>
+
+        <button type="submit" mat-raised-button color="primary">Search</button>
+        <button type="reset" mat-raised-button color="accent" class="ml-3" (click)="resetFilters()"
+          [disabled]="!searchForm.dirty">Reset</button>
+
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+  <div class="mat-elevation-z8 mt-3">
+    <table mat-table class="full-width-table" matSort aria-label="Elements">
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+        <td mat-cell *matCellDef="let row">{{row.name}}</td>
+      </ng-container>
+
+      <!-- address street  -->
+      <ng-container matColumnDef="address.street">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Street</th>
+        <td mat-cell *matCellDef="let row">{{row.address.street}}</td>
+      </ng-container>
+
+      <!-- address suburb  -->
+      <ng-container matColumnDef="address.suburb">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Suburb</th>
+        <td mat-cell *matCellDef="let row">{{row.address.suburb}}</td>
+      </ng-container>
+
+      <!-- address state  -->
+      <ng-container matColumnDef="address.state">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>State</th>
+        <td mat-cell *matCellDef="let row">{{row.address.state}}</td>
+      </ng-container>
+
+      <!-- address postcode  -->
+      <ng-container matColumnDef="address.postcode">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Post Code</th>
+        <td mat-cell *matCellDef="let row">{{row.address.postcode}}</td>
+      </ng-container>
+
+      <!-- number of students -->
+      <ng-container matColumnDef="studentCount">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Count</th>
+        <td mat-cell *matCellDef="let row">{{row.studentCount}}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator #paginator [length]="dataSource.total$ | async" [pageIndex]="0" [pageSize]="20">
+    </mat-paginator>
+  </div>
+
+
+  <button mat-fab class="fixed-bottom-right" (click)="openNewSchoolDialog()">
+    <mat-icon aria-label="Add a school">add</mat-icon>
+  </button>
+
+
+</div>

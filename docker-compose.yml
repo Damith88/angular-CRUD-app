@@ -1,0 +1,35 @@
+version: '3'
+services:
+  appui:
+    image: schoolbag-angular-app
+    build: .
+    volumes:
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "80:80"
+    networks:
+      - backend
+    depends_on:
+      - api
+  api:
+    image: schoolbag-express-app
+    build: api
+    environment:
+      MONGO_HOST: 'mongo'
+    command: ["npm", "start"]
+    networks:
+      - backend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge
