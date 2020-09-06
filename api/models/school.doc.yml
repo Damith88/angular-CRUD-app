@@ -2,6 +2,7 @@ components:
   schemas:
     Address:
       type: object
+      description: Object model for school address
       properties:
         street:
           type: string
@@ -16,8 +17,9 @@ components:
           type: string
           description: postcode of the school address
 
-    NewSchool:
+    SchoolRequest:
       type: object
+      description: Object model for new school creation
       required:
         - name
       properties:
@@ -30,6 +32,7 @@ components:
         address:
           $ref: "#/components/schemas/Address"
     School:
+      description: Object model for school
       allOf:
         - type: object
           required:
@@ -37,4 +40,4 @@ components:
           properties:
             _id:
               type: string
-        - $ref: "#/components/schemas/NewSchool"
+        - $ref: "#/components/schemas/SchoolRequest"

@@ -84,7 +84,7 @@
       content:
         application/json:
           schema:
-            $ref: "#/components/schemas/NewSchool"
+            $ref: "#/components/schemas/SchoolRequest"
           example:
             name: ATTADALE PRIMARY SCHOOL
             studentCount: 390

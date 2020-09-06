@@ -2,7 +2,6 @@ var School = require('../models/school');
 
 const { body, validationResult } = require('express-validator');
 
-// Display list of all books.
 exports.list = async (req, res, next) => {
     try {
         const { page = 1, limit = 20, sort = 'name', sortOrder = 'asc' } = req.query;

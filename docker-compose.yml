@@ -4,7 +4,7 @@ services:
     image: schoolbag-angular-app
     build: .
     volumes:
-      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./docker/nginx/default.proxy.conf:/etc/nginx/conf.d/default.conf
     ports:
       - "80:80"
     networks:
