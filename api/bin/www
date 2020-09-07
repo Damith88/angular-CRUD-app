@@ -5,6 +5,7 @@
  */
 
 var app = require('../app');
+var db = require('../db');
 var debug = require('debug')('schoolbag:server');
 var http = require('http');
 
@@ -15,15 +16,7 @@ var http = require('http');
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
- // Set up mongoose connection
- var mongoose = require('mongoose');
- let mongoHost = process.env.MONGO_HOST || '127.0.0.1';
- let mongoDatabase = process.env.MONGO_DATABASE || 'schoolbag';
- var mongoDB = `mongodb://${mongoHost}:27017/${mongoDatabase}`;
- mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
- mongoose.Promise = global.Promise;
- var db = mongoose.connection;
- db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 /**
  * Create HTTP server.
