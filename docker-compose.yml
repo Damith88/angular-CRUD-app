@@ -1,6 +1,6 @@
 version: '3'
 services:
-  appui:
+  web:
     image: schoolbag-angular-app
     build: .
     volumes:
