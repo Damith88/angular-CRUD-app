@@ -5,7 +5,7 @@
         <div class="row">
             <mat-form-field appearance="standard" class="col">
                 <mat-label>Name:</mat-label>
-                <input type="text" matInput formControlName="name">
+                <input required type="text" matInput formControlName="name">
                 <mat-error *ngIf="createForm.get('name').hasError('required')">
                     Name is required
                 </mat-error>
@@ -56,6 +56,6 @@
     </form>
 </mat-dialog-content>
 <mat-dialog-actions>
-    <button type="submit" mat-raised-button color="primary" (click)="createSchool()">Create</button>
+    <button type="submit" mat-raised-button color="primary" [disabled]="!createForm.valid" (click)="createSchool()">Create</button>
     <button type="reset" mat-raised-button color="accent" class="ml-3" (click)="cancel()">Cancel</button>
 </mat-dialog-actions>

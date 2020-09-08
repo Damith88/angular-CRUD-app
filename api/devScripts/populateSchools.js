@@ -23,6 +23,9 @@ if (!Array.isArray(data)) {
     console.log(data);
 } else {
     (async () => {
+        if (userArgs[2] == '--drop-collection') {
+            await db.dropCollection('schools');
+        }
         await School.insertMany(data);
         await db.close();
     })().then(() => process.exit());

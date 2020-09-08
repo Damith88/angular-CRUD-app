@@ -1,0 +1,252 @@
+[
+    {
+        "name": "ADAM ROAD PRIMARY SCHOOL",
+        "address": {
+            "street": "HOTCHIN STREET",
+            "suburb": "SOUTH BUNBURY",
+            "state": "WA",
+            "postcode": "6230"
+        },
+        "studentCount": 474
+    },
+    {
+        "name": "AL-HIDAYAH ISLAMIC SCHOOL",
+        "address": {
+            "street": "CNR HEDLEY ST/NYAMUP WAY",
+            "suburb": "BENTLEY",
+            "state": "WA",
+            "postcode": "6102"
+        },
+        "studentCount": 212
+    },
+    {
+        "name": "ALBANY COMMUNITY KINDERGARTEN",
+        "address": {
+            "street": "136 SERPENTINE ROAD",
+            "suburb": "ALBANY",
+            "state": "WA",
+            "postcode": "6330"
+        },
+        "studentCount": 40
+    },
+    {
+        "name": "ALBANY PRIMARY SCHOOL",
+        "address": {
+            "street": "SUFFOLK STREET",
+            "suburb": "ALBANY",
+            "state": "WA",
+            "postcode": "6330"
+        },
+        "studentCount": 430
+    },
+    {
+        "name": "ALBANY SECONDARY EDUCATION SUPPORT CENTRE",
+        "address": {
+            "street": "65 ANSON ROAD",
+            "suburb": "ALBANY",
+            "state": "WA",
+            "postcode": "6330"
+        },
+        "studentCount": 50
+    },
+    {
+        "name": "ALBANY SENIOR HIGH SCHOOL",
+        "address": {
+            "street": "1 CAMPBELL ROAD",
+            "suburb": "ALBANY",
+            "state": "WA",
+            "postcode": "6330"
+        },
+        "studentCount": 1005
+    },
+    {
+        "name": "ALINJARRA PRIMARY SCHOOL",
+        "address": {
+            "street": "33 NORTHUMBERLAND AVENUE",
+            "suburb": "ALEXANDER HEIGHTS",
+            "state": "WA",
+            "postcode": "6064"
+        },
+        "studentCount": 356
+    },
+    {
+        "name": "ALKIMOS BAPTIST COLLEGE",
+        "address": {
+            "street": "60 SEAGROVE BOULEVARD",
+            "suburb": "MERRIWA",
+            "state": "WA",
+            "postcode": "6030"
+        },
+        "studentCount": 301
+    },
+    {
+        "name": "ALKIMOS BEACH PRIMARY SCHOOL",
+        "address": {
+            "street": "200 LEATHERBACK BOULEVARD",
+            "suburb": "ALKIMOS",
+            "state": "WA",
+            "postcode": "6038"
+        },
+        "studentCount": 678
+    },
+    {
+        "name": "ALKIMOS COLLEGE",
+        "address": {
+            "street": "101 SANTORINI PROMENADE",
+            "suburb": "ALKIMOS",
+            "state": "WA",
+            "postcode": "6038"
+        },
+        "studentCount": 176
+    },
+    {
+        "name": "ALKIMOS PRIMARY SCHOOL",
+        "address": {
+            "street": "340 BENENDEN AVENUE",
+            "suburb": "ALKIMOS",
+            "state": "WA",
+            "postcode": "6038"
+        },
+        "studentCount": 622
+    },
+    {
+        "name": "ALL SAINTS' COLLEGE",
+        "address": {
+            "street": "28 EWING AVENUE",
+            "suburb": "BULL CREEK",
+            "state": "WA",
+            "postcode": "6149"
+        },
+        "studentCount": 1346
+    },
+    {
+        "name": "ALLANSON PRIMARY SCHOOL",
+        "address": {
+            "street": "CAMERON STREET",
+            "suburb": "ALLANSON",
+            "state": "WA",
+            "postcode": "6225"
+        },
+        "studentCount": 93
+    },
+    {
+        "name": "ALLENDALE PRIMARY SCHOOL",
+        "address": {
+            "street": "52 WITTENOOM STREET",
+            "suburb": "GERALDTON",
+            "state": "WA",
+            "postcode": "6530"
+        },
+        "studentCount": 386
+    },
+    {
+        "name": "ALTA-1",
+        "address": {
+            "street": "4A/14 UPPILL PLACE",
+            "suburb": "WANGARA",
+            "state": "WA",
+            "postcode": "6065"
+        },
+        "studentCount": 910
+    },
+    {
+        "name": "AMAROO PRIMARY SCHOOL",
+        "address": {
+            "street": "79 JONES STREET",
+            "suburb": "COLLIE",
+            "state": "WA",
+            "postcode": "6225"
+        },
+        "studentCount": 289
+    },
+    {
+        "name": "ANNE HAMERSLEY PRIMARY SCHOOL",
+        "address": {
+            "street": "16 DUNNETT DRIVE",
+            "suburb": "ELLENBROOK",
+            "state": "WA",
+            "postcode": "6069"
+        },
+        "studentCount": 539
+    },
+    {
+        "name": "ANZAC TERRACE PRIMARY SCHOOL",
+        "address": {
+            "street": "176 ANZAC TERRACE",
+            "suburb": "BASSENDEAN",
+            "state": "WA",
+            "postcode": "6054"
+        },
+        "studentCount": 370
+    },
+    {
+        "name": "APPLECROSS PRIMARY SCHOOL",
+        "address": {
+            "street": "65 KINTAIL ROAD",
+            "suburb": "APPLECROSS",
+            "state": "WA",
+            "postcode": "6153"
+        },
+        "studentCount": 577
+    },
+    {
+        "name": "APPLECROSS SENIOR HIGH SCHOOL",
+        "address": {
+            "street": "LINKS ROAD",
+            "suburb": "ARDROSS",
+            "state": "WA",
+            "postcode": "6153"
+        },
+        "studentCount": 1652
+    },
+    {
+        "name": "AQUINAS COLLEGE",
+        "address": {
+            "street": "58 MT HENRY ROAD",
+            "suburb": "SALTER POINT",
+            "state": "WA",
+            "postcode": "6152"
+        },
+        "studentCount": 1321
+    },
+    {
+        "name": "ARANMORE CATHOLIC COLLEGE",
+        "address": {
+            "street": "41 FRANKLIN STREET",
+            "suburb": "LEEDERVILLE",
+            "state": "WA",
+            "postcode": "6007"
+        },
+        "studentCount": 719
+    },
+    {
+        "name": "ARANMORE CATHOLIC PRIMARY SCHOOL",
+        "address": {
+            "street": "20 BRENTHAM STREET",
+            "suburb": "LEEDERVILLE",
+            "state": "WA",
+            "postcode": "6007"
+        },
+        "studentCount": 403
+    },
+    {
+        "name": "ARBOR GROVE PRIMARY SCHOOL",
+        "address": {
+            "street": "BROOKMOUNT DRIVE",
+            "suburb": "ELLENBROOK",
+            "state": "WA",
+            "postcode": "6069"
+        },
+        "studentCount": 733
+    },
+    {
+        "name": "ARDROSS PRIMARY SCHOOL",
+        "address": {
+            "street": "46 LINKS ROAD",
+            "suburb": "ARDROSS",
+            "state": "WA",
+            "postcode": "6153"
+        },
+        "studentCount": 399
+    }
+]

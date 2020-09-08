@@ -1,0 +1,5 @@
+version: '3'
+services:
+  api:
+    environment:
+      MONGO_DATABASE: 'schoolbagtest'
