@@ -24,7 +24,7 @@ export class SchoolListComponent implements AfterViewInit, OnInit {
   filters: object = {};
   filtersApplied: boolean = false;
 
-  constructor(private schoolService: SchoolService, private dialog: MatDialog) {
+  constructor(private schoolService: SchoolService, private dialog: MatDialog, private fb: FormBuilder) {
 
   }
 
@@ -34,7 +34,19 @@ export class SchoolListComponent implements AfterViewInit, OnInit {
   ngOnInit() {
     this.dataSource = new SchoolListDataSource(this.schoolService);
     this.dataSource.loadSchools();
-    this.searchForm = this.schoolService.getSearchForm();
+    this.searchForm = this.getSearchForm();
+  }
+
+  getSearchForm(): FormGroup {
+    return this.fb.group({
+      name: [''],
+      address: this.fb.group({
+        street: [''],
+        suburb: [''],
+        state: [''],
+        postcode: ['']
+      })
+    });
   }
 
   search() {
@@ -61,7 +73,9 @@ export class SchoolListComponent implements AfterViewInit, OnInit {
     const dialogRef = this.dialog.open(NewSchoolComponent, {width: '400px'});
 
     dialogRef.afterClosed().subscribe(result => {
-      this.loadSchools();
+      if (result) {
+        this.loadSchools();
+      }
     });
   }
 

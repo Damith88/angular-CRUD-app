@@ -2,7 +2,6 @@ import { Injectable } from "@angular/core";
 import { HttpClient, HttpParams } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { School } from "./school";
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 interface SearchResult {
     payload: School[];
@@ -17,33 +16,8 @@ interface SearchResult {
 })
 export class SchoolService {
 
-    constructor(private http: HttpClient, private fb: FormBuilder) {
+    constructor(private http: HttpClient) {
 
-    }
-
-    getSearchForm(): FormGroup {
-      return this.fb.group({
-        name: [''],
-        address: this.fb.group({
-          street: [''],
-          suburb: [''],
-          state: [''],
-          postcode: ['']
-        })
-      });
-    }
-
-    getCreateForm(): FormGroup {
-      return this.fb.group({
-        name: ['', Validators.required],
-        address: this.fb.group({
-          street: [''],
-          suburb: [''],
-          state: [''],
-          postcode: ['']
-        }),
-        studentCount: ['', Validators.pattern(/^\d+$/)]
-      });
     }
 
     findSchools(

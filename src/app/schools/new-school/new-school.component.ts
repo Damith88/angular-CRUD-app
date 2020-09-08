@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { SchoolService } from '../school.service';
 import { MatDialogRef } from '@angular/material/dialog';
 import { School } from '../school';
@@ -12,10 +12,23 @@ import { School } from '../school';
 export class NewSchoolComponent implements OnInit {
   createForm: FormGroup;
 
-  constructor(private schoolService: SchoolService, private dialogRef: MatDialogRef<NewSchoolComponent>) { }
+  constructor(private schoolService: SchoolService, private dialogRef: MatDialogRef<NewSchoolComponent>, private fb: FormBuilder) { }
 
   ngOnInit(): void {
-    this.createForm = this.schoolService.getCreateForm();
+    this.createForm = this.getCreateForm();
+  }
+
+  getCreateForm(): FormGroup {
+    return this.fb.group({
+      name: ['', Validators.required],
+      address: this.fb.group({
+        street: [''],
+        suburb: [''],
+        state: [''],
+        postcode: ['']
+      }),
+      studentCount: ['', Validators.pattern(/^\d+$/)]
+    });
   }
 
   createSchool() {
